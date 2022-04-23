@@ -17,7 +17,7 @@ function Navbar() {
               <img
                 src="https://nftkart.queppelinsolutions.com/favicon.png"
                 alt="logo"
-                className="sm:hidden w-10"
+                className="sm:hidden w-8 h-8 rounded-full"
               />
             </div>
             <div className="flex justify-center items-center cursor-pointer text-[rgb(193,193,193)] px-2">
@@ -39,7 +39,7 @@ function Navbar() {
             </div>
             <div className="flex justify-center items-center">
               <div className="px-3 sm:px-3">
-                <div className="w-12">
+                <div className="w-8 sm:w-12">
                   <img
                     src="/login.png"
                     alt="login"

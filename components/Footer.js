@@ -3,23 +3,6 @@ import SupervisorAccountIcon from "@mui/icons-material/SupervisorAccount";
 function Footer() {
   return (
     <div className="relative w-full">
-      <div className="flex w-full h-[15rem] justify-center items-center bg-gradient-to-r from-[rgb(28,29,32)] to-[rgb(103,112,121)]">
-        <div className="flex flex-col items-center justify-center">
-          <h1 className="text-white text-base sm:text-[2rem]">
-            Enter your Email to join our Newsletter
-          </h1>
-          <div className="flex items-center justify-center pt-5 sm:pt-10">
-            <input
-              type="text"
-              placeholder="Your email address"
-              className="placeholder-white rounded-md w-[12rem] sm:w-[20rem] bg-[rgb(109,109,109)] text-xs py-2 pl-2"
-            />
-            <button className="text-white bg-[rgb(161,75,170)] text-xs py-2 px-2 cursor-pointer">
-              SUBSCRIBE
-            </button>
-          </div>
-        </div>
-      </div>
       <div className="flex w-full h-auto justify-center items-center bg-gradient-to-t from-[rgb(36,36,36)] to-[rgb(62,62,62)]">
         <div className="flex flex-col items-center justify-center pt-6 sm:pt-12">
           <img
