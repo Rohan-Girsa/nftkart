@@ -21,20 +21,38 @@ function Navbar() {
               />
             </div>
             <div className="flex justify-center items-center cursor-pointer text-[rgb(193,193,193)] px-2">
-              <div className="px-4 sm:px-14 hover:text-white text-xs list-none">
-                <li className={router.pathname === "/" ? "active" : ""}>
+              <div className="text-xs">
+                <button
+                  className={`relative w-12 sm:w-28 py-4 border-none outline-none ${
+                    router.pathname === "/"
+                      ? "active text-white after:w-12 after:sm:w-28"
+                      : "inactive after:w-12 after:sm:w-28"
+                  }`}
+                >
                   <Link href="/">HOME</Link>
-                </li>
+                </button>
               </div>
-              <div className="px-4 sm:px-14 hover:text-white text-xs list-none">
-                <li className={router.pathname === "/store" ? "active" : ""}>
+              <div className="text-xs">
+                <button
+                  className={`relative w-12 sm:w-28 py-4 border-none outline-none ${
+                    router.pathname === "/store"
+                      ? "active text-white after:w-12 after:sm:w-28"
+                      : "inactive after:w-12 after:sm:w-28"
+                  }`}
+                >
                   <Link href="/store">STORE</Link>
-                </li>
+                </button>
               </div>
-              <div className="px-4 sm:px-14 hover:text-white text-xs list-none">
-                <li className={router.pathname === "/faqs" ? "active" : ""}>
-                  <Link href="/faqs">FAQS!</Link>
-                </li>
+              <div className="text-xs">
+                <button
+                  className={`relative w-12 sm:w-28 py-4 border-none outline-none ${
+                    router.pathname === "/faqs"
+                      ? "active text-white after:w-12 after:sm:w-28"
+                      : "inactive after:w-12 after:sm:w-28"
+                  }`}
+                >
+                  <Link href="/faqs">FAQS</Link>
+                </button>
               </div>
             </div>
             <div className="flex justify-center items-center">
