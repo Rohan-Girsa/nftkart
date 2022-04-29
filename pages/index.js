@@ -12,7 +12,6 @@ export default function Home() {
           rel="icon"
           href="https://nftkart.queppelinsolutions.com/favicon.png"
         />
-        <script src="./TW-ELEMENTS-PATH/dist/js/index.min.js"></script>
       </Head>
       <Homepage />
     </div>

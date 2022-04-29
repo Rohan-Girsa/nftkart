@@ -1,7 +1,7 @@
 function Homeitemthree() {
   return (
     <>
-      <section className="flex flex-col md:flex-row items-center justify-start px-5 sm:px-[12.5%] pb-7 sm:pb-16">
+      <section className="flex flex-col sm:flex-row items-center justify-start px-5 sm:px-[8.5%] md:px-[10%] lg:px-[12.5%] pb-7 sm:pb-16">
         <div className="flex flex-col items-center justify-center cursor-pointer py-3 sm:px-3">
           <div className="flex flex-col items-end justify-start relative">
             <div className="absolute pt-5 pr-3">

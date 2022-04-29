@@ -9,6 +9,8 @@ import Footer from "./shared/Footer";
 import Navbar from "./shared/Navbar";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
+import Saledata from "./components/Saledata";
+import Card from "./shared/Card";
 
 function store() {
   const [showSidebar, setShowSidebar] = useState(true);
@@ -84,7 +86,23 @@ function store() {
       </div>
       {showSidebar ? (
         <div className="px-5 sm:px-20 pt-14 sm:pt-20 bg-[rgb(250,250,250)]">
-          {btnActive === "sale" ? <Storeitemone /> : <Storeitemthree />}
+          {btnActive === "sale" ? (
+            <section className="grid grid-cols-4 items-center justify-center sm:items-start sm:justify-start pb-5 sm:pb-10">
+              {Saledata.map((data, index) => {
+                return (
+                  <Card
+                    key={data.index}
+                    bid={data.bid}
+                    image={data.img}
+                    title={data.title}
+                    description={data.description}
+                  />
+                );
+              })}
+            </section>
+          ) : (
+            <Storeitemthree />
+          )}
         </div>
       ) : (
         <div className="pt-[24rem] sm:pt-20 px-5 sm:pl-[24%] bg-[rgb(250,250,250)]">

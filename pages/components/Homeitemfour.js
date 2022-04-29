@@ -1,7 +1,7 @@
 function Homeitemfour() {
   return (
     <>
-      <section className="flex flex-col sm:grid sm:grid-cols-3 sm:gap-x-24 sm:gap-y-10 lg:flex lg:flex-row items-center justify-center px-5 sm:px-[8.5%]">
+      <section className="flex flex-col sm:grid sm:grid-cols-3 sm:gap-x-24 sm:gap-y-10 lg:flex lg:flex-row items-center justify-center px-5 sm:px-[8.5%] md:px-[10%] lg:px-[12.5%]">
         <div className="flex items-center justify-center py-16 sm:px-[5rem] ">
           <div className="flex flex-col items-center justify-center absolute">
             <div className="relative top-7">

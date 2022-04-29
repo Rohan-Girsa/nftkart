@@ -1,3 +1,4 @@
+import Card from "../shared/Card";
 import Footer from "../shared/Footer";
 import Navbar from "../shared/Navbar";
 import Homeitemfive from "./Homeitemfive";

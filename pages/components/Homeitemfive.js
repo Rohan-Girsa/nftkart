@@ -1,7 +1,7 @@
 function Homeitemfive() {
   return (
     <>
-      <section className="flex flex-col sm:grid sm:grid-cols-2 lg:flex lg:flex-row items-center justify-center px-5 sm:px-[8.5%] lg:px-[12.5%] pb-8 sm:pb-12 lg:pb-16">
+      <section className="flex flex-col sm:grid sm:grid-cols-2 lg:flex lg:flex-row items-center justify-center px-5 sm:px-[8.5%] md:px-[10%] lg:px-[12.5%] pb-8 sm:pb-12 lg:pb-16">
         <div className="flex flex-col items-center justify-center py-4 sm:px-5">
           <img
             src="https://nftkart.queppelinsolutions.com/wallet.png"

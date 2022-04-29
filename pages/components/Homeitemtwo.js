@@ -1,7 +1,7 @@
 function Homeitemtwo() {
   return (
     <>
-      <section className="flex flex-col items-center justify-center px-5 sm:px-[12.5%] pb-5 sm:pb-20">
+      <section className="flex flex-col items-center justify-center px-5 sm:px-[8.5%] md:px-[10%] lg:px-[12.5%]y pb-5 sm:pb-20">
         <div className="flex flex-col md:flex-row items-center justify-center pb-3">
           <div className="flex flex-col items-center justify-center cursor-pointer py-3 sm:px-3">
             <div className="flex flex-col items-end justify-start relative">
