@@ -2,15 +2,16 @@ import { useState } from "react";
 import Price from "./components/Price";
 import Sortby from "./components/Sortby";
 import Storeitemfour from "./components/Storeitemfour";
-import Storeitemone from "./components/Storeitemone";
 import Storeitemthree from "./components/Storeitemthree";
-import Storeitemtwo from "./components/Storeitemtwo";
 import Footer from "./shared/Footer";
 import Navbar from "./shared/Navbar";
 import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import Saledata from "./components/Saledata";
 import Card from "./shared/Card";
+import Scard from "./shared/Scard";
+import Auctiondata from "./components/Auctiondata";
+import Page from "./shared/Page";
 
 function store() {
   const [showSidebar, setShowSidebar] = useState(true);
@@ -87,7 +88,7 @@ function store() {
       {showSidebar ? (
         <div className="px-5 sm:px-20 pt-14 sm:pt-20 bg-[rgb(250,250,250)]">
           {btnActive === "sale" ? (
-            <section className="grid grid-cols-4 items-center justify-center sm:items-start sm:justify-start pb-5 sm:pb-10">
+            <section className="grid grid-cols-1 items-center justify-center sm:grid-cols-2 md:grid-cols-4 sm:items-start sm:justify-start pb-5 sm:pb-10">
               {Saledata.map((data, index) => {
                 return (
                   <Card
@@ -101,12 +102,54 @@ function store() {
               })}
             </section>
           ) : (
-            <Storeitemthree />
+            <section className="grid grid-cols-1 items-center justify-center sm:grid-cols-2 sm:items-start sm:justify-start pb-5 sm:pb-10">
+              {Auctiondata.map((data, index) => {
+                return (
+                  <Card
+                    key={data.index}
+                    bid={data.bid}
+                    image={data.img}
+                    title={data.title}
+                    description={data.description}
+                  />
+                );
+              })}
+            </section>
           )}
+          <Page />
         </div>
       ) : (
         <div className="pt-[24rem] sm:pt-20 px-5 sm:pl-[24%] bg-[rgb(250,250,250)]">
-          {btnActive === "sale" ? <Storeitemtwo /> : <Storeitemfour />}
+          {btnActive === "sale" ? (
+            <section className="grid grid-cols-1 items-center justify-center sm:grid-cols-2 md:grid-cols-4 sm:items-start sm:justify-start pb-5 sm:pb-10">
+              {Saledata.map((data, index) => {
+                return (
+                  <Scard
+                    key={data.index}
+                    bid={data.bid}
+                    image={data.img}
+                    title={data.title}
+                    description={data.description}
+                  />
+                );
+              })}
+            </section>
+          ) : (
+            <section className="grid grid-cols-1 items-center justify-center sm:grid-cols-2 sm:items-start sm:justify-start pb-5 sm:pb-10">
+              {Auctiondata.map((data, index) => {
+                return (
+                  <Scard
+                    key={data.index}
+                    bid={data.bid}
+                    image={data.img}
+                    title={data.title}
+                    description={data.description}
+                  />
+                );
+              })}
+            </section>
+          )}
+          <Page />
         </div>
       )}
       <Footer />
