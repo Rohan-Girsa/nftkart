@@ -89,7 +89,15 @@ function store() {
         <div className="px-5 sm:px-20 pt-14 sm:pt-20 bg-[rgb(250,250,250)]">
           {btnActive === "sale" ? (
             <section className="grid grid-cols-1 items-center justify-center sm:grid-cols-2 md:grid-cols-4 sm:items-start sm:justify-start pb-5 sm:pb-10">
-              {Saledata.map((data, index) => {
+              {Saledata.filter((data) => {
+                if (searchStore === "") {
+                  return data;
+                } else if (
+                  data.title.toLowerCase().includes(searchStore.toLowerCase())
+                ) {
+                  return data;
+                }
+              }).map((data, index) => {
                 return (
                   <Card
                     key={data.index}
@@ -122,7 +130,15 @@ function store() {
         <div className="pt-[24rem] sm:pt-20 px-5 sm:pl-[24%] bg-[rgb(250,250,250)]">
           {btnActive === "sale" ? (
             <section className="grid grid-cols-1 items-center justify-center sm:grid-cols-2 md:grid-cols-4 sm:items-start sm:justify-start pb-5 sm:pb-10">
-              {Saledata.map((data, index) => {
+              {Saledata.filter((data) => {
+                if (searchStore === "") {
+                  return data;
+                } else if (
+                  data.title.toLowerCase().includes(searchStore.toLowerCase())
+                ) {
+                  return data;
+                }
+              }).map((data, index) => {
                 return (
                   <Scard
                     key={data.index}
